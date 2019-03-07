@@ -8,16 +8,30 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { WordpressService } from '../app/providers/wordpress.service';
+import { HttpModule } from '@angular/http';
+import { PostPage } from './post/post.page';
+import { CategoryListPage } from './category-list/category-list.page';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [
+    CategoryListPage,
+    PostPage,
+    AppComponent],
+
+  entryComponents: [
+    // CategoryListPage,
+    // PostPage,
+  ],
+
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [
+    WordpressService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

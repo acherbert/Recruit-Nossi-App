@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Routes, RouterModule, Router} from '@angular/router'
+import {  Router, Routes, RouterModule} from '@angular/router'
 import { WordpressService  } from '../providers/wordpress.service';
+
 
 @Component({
   selector: 'app-home',
@@ -13,23 +14,31 @@ import { WordpressService  } from '../providers/wordpress.service';
 export class HomePage {
 
   categories: any;
+  pages: any;
 
-  constructor(public router: Router, public wp: WordpressService){
-    this.retrieveCategories();
 
+
+  constructor(public router: Router, 
+     public wp: WordpressService){
+  
   }
+
+ 
+
   // ionViewDidLoad(){
   //   this.wp.retrieveCategories().subscribe(results => {
   //     this.categories = results.json;
       
   //   });
   // }
+
   retrieveCategories(){
     this.wp.retrieveCategories().subscribe(results => {
-      this.categories = results.json();
+      this.categories = results;
       
      
     });
+    
   }
 loadCategory(id: number){
   this.router.navigate(['/category-list'],{
@@ -39,3 +48,4 @@ loadCategory(id: number){
   }
  
 }
+

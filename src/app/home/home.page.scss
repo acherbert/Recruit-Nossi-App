@@ -1,4 +1,70 @@
 .welcome-card ion-img {
   max-height: 35vh;
   overflow: hidden;
+  background-color: #2363A1;
+ 
+
+}
+
+ion-content{
+  background-color: #2363A1;
+}
+
+ion-card{
+  background-color: #2363A1;
+
+  
+}
+ion-list{
+  background-color:#2363A1;
+  
+}
+
+ion-item{
+  background-color: #ABECEC;
+  --color:green;
+
+}
+
+ion-card-content{
+  --color:white;
+}
+ion-card-subtitle{
+  --color:white;
+}
+#page{
+  --background:black;
+  --color:white;
+  margin: 14px;
+  box-shadow:2px 4px #F6B100;
+}
+
+#welcome {
+  --color:white;
+  
+}
+ion-menu-button{
+  --color:white;
+}
+ion-toolbar{
+  --color:black;
+  --background:#2363A1;;
+}
+
+ion-title{
+  --color:white;
+}
+
+#bkg {
+  --background:#326A98;
+  --color:white;
+}
+
+#bkg2 {
+  --background:#326A98;
+  --color:white;
+}
+
+#line{
+  color:white;
 }

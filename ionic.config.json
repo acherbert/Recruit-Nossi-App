@@ -1,5 +1,8 @@
 {
   "name": "recruiteNossi",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

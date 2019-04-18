@@ -1,24 +1,85 @@
 <ion-app>
   <ion-split-pane>
     <ion-menu>
-      <ion-header>
-        <ion-toolbar>
+      <ion-header id="bkg2">
+        <ion-toolbar id="bkg">
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
+      <ion-content id="bkg1">
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item [routerDirection]="'root'" (click)="goHome()">
+            <ion-label id="bkg3">Home</ion-label>
+          </ion-item>
+
+        </ion-menu-toggle>
+
+
+
+        
+
+
+
+
+
+        <ion-menu-toggle auto-hide="false"> 
+            <ion-item id="illu" [routerDirection]="'root'" (click)="showDegreePage(410, 275, 245)"> 
+              <ion-label>Illustration</ion-label>
+
+              </ion-item>
           </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
-  </ion-split-pane>
-</ion-app>
+
+         <ion-menu-toggle auto-hide="false">
+                <ion-item id="web" [routerDirection]="'root'" (click)="showDegreePage(435, 439, 437)">
+                  <ion-label>Web and Interactive Design
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+            <ion-menu-toggle auto-hide="false"> 
+                <ion-item id="graphic"[routerDirection]="'root'" (click)="showDegreePage(420, 272, 243)"> 
+                  <ion-label>Graphic Design</ion-label>
+    
+                  </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle auto-hide="false"> 
+                  <ion-item id="vid" [routerDirection]="'root'" (click)="showDegreePage(421, 280, 249)"> 
+                    <ion-label>Videography</ion-label>
+      
+                    </ion-item>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false"> 
+                    <ion-item id="photo" [routerDirection]="'root'" (click)="showDegreePage(414, 277, 263)"> 
+                      <ion-label>Photography</ion-label>
+        
+                      </ion-item>
+                  </ion-menu-toggle>
+                  
+                  <ion-menu-toggle auto-hide="false">
+                    <ion-item id="ill" [routerDirection]="'root'" (click)="showPage(13)">
+                      <ion-label >Culture</ion-label>
+                    </ion-item>
+          
+                  </ion-menu-toggle>
+          
+                  <ion-menu-toggle auto-hide="false">
+                    <ion-item id="ill" [routerDirection]="'root'" (click)="showPage(16)">
+                      <ion-label >Apply</ion-label>
+                    </ion-item>
+          
+                  </ion-menu-toggle>
+
+
+            </ion-list>  
+          </ion-content>
+          </ion-menu>
+          <ion-router-outlet main></ion-router-outlet>
+          </ion-split-pane>
+          </ion-app>
+          
+                 
+              
+       

@@ -9,9 +9,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WordpressService } from '../app/providers/wordpress.service';
-import { HttpModule } from '@angular/http';
 import { PostPage } from './post/post.page';
 import { CategoryListPage } from './category-list/category-list.page';
+import { RouterModule,Routes } from '@angular/router'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CategoryListPage } from './category-list/category-list.page';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [
     WordpressService,

@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button id="buttonHM"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>degreePage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
+  
+
+    
+    <ion-segment [(ngModel)]="tabSelection">
+        <ion-segment-button value="about">
+          About
+          <ion-icon name="school"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="gallery">
+          Gallery
+          <ion-icon name="photos"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="curriculum">
+          Curriculum
+          <ion-icon name="list-box"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+      
+      
+      <div [ngSwitch]="tabSelection">
+      
+        <ion-list *ngSwitchCase="'about'">
+            <ion-item>
+                <h1> {{ degreeData.title.rendered }} </h1>
+                <div [innerHTML]="degreeData.content.rendered"></div>
+            </ion-item>
+        </ion-list>
+        
+        <ion-list *ngSwitchCase="'gallery'">
+            <div class="video" *ngIf="pageID == 280">
+              <h1 [innerHTML]="galleryData.title.rendered"></h1>
+              <ion-slides pager="true" [options]="slideOpts">
+                    <ion-slide [style.justify-content]="'flex-start'" *ngFor="let vid of galleryImageURLs">
+                      <video controls [src]="vid"></video>
+                    </ion-slide>
+                </ion-slides>
+              </div>
+            <div *ngIf="pageID != 280">
+                <h1 [innerHTML]="galleryData.title.rendered"></h1>
+                <ion-slides pager="true" [options]="slideOpts">
+                      <ion-slide *ngFor="let img of galleryImageURLs">
+                        <img [src]="img" alt="">
+                      </ion-slide>
+                  </ion-slides>
+            </div>
+            </ion-list>
+
+        <ion-list *ngSwitchCase="'curriculum'">
+          <ion-item>
+              <h1> {{ curriculumData.title.rendered }} </h1>
+              <div [innerHTML]="curriculumData.content.rendered"></div>
+          </ion-item>
+        </ion-list>
+      
+      </div>
+    
+</ion-content>
+

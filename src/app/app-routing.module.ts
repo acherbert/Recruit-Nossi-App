@@ -17,7 +17,11 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'category-list', loadChildren: './category-list/category-list.module#CategoryListPageModule' },
-  { path: 'post', loadChildren: './post/post.module#PostPageModule' }
+  { path: 'post', loadChildren: './post/post.module#PostPageModule' },
+  { path: 'page/:id', loadChildren: './page/page.module#PagePageModule' },
+  { path: 'degree-page/:id/:gal/:cur', loadChildren: './degree-page/degree-page.module#DegreePagePageModule' }
+ 
+  
 ];
 
 @NgModule({

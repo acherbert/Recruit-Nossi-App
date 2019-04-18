@@ -9,3 +9,83 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+#web {
+    --background:#A16275;
+    --color:white;
+    text-align:center;
+    border:double;
+}
+
+#web:hover{
+    color:#00BFFF;
+
+}
+#vid {
+    --background:#5364A2;
+    --color:white;
+    text-align:center;
+    border:double;
+}
+#vid:hover{
+    color:#00BFFF;
+
+}
+#illu {
+    --background:#D39DD1;
+    --color:white;
+    text-align:center;
+    border:double;
+}
+#illu:hover{
+    color:#00BFFF;
+
+}
+#graphic {
+    --background:#816FA6;
+    --color:white;
+    text-align:center;
+    border:double;
+}
+
+#graphic:hover{
+    color:#00BFFF;
+
+}
+#ill {
+    --background:#326A98;
+    --color:white;
+    text-align:center;
+    border:double;
+}
+#ill:hover{
+    color:#00BFFF;
+
+}
+
+#photo {
+    --background:#A7A918;
+    --color:white;
+    text-align:center;
+    border:double;
+}
+#photo:hover{
+    color:#00BFFF;
+
+}
+
+#bkg1 {
+    --background:#326A98;
+    --color:white;
+}
+#bkg {
+    --background:#326A98;
+    --color:white;
+}
+
+#bkg2 {
+    --background:#326A98;
+    --color:white;
+}
+

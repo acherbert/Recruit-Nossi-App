@@ -1,19 +1,32 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WordpressService {
-  baseUrl: string = "http:recruit.nossi.online/wp-json/wp/v2/";
+  baseUrl: string = "http://recruit.nossi.online/wp-json/wp/v2/";
   http;
   
-  constructor(http:Http){
-    this.http = http;
+  constructor(http:HttpClient){
+    this.http = http
 
   }
+  retrievePagesByID(pageID){
+    return this.http.get(this.baseUrl + 'pages/' + pageID)
+    .pipe(
+      map(res => res)
+    )
+}
 
+  retrievePages(){
+    return this.http.get(this.baseUrl + 'pages')
+    .pipe(
+      map(res => res)
+    )
+  }
+  
   retrieveCategories(){
     return this.http.get(this.baseUrl + 'categories')
     .pipe(
